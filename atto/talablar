@@ -1,0 +1,56 @@
+                     ***** Atto Project *****
+Atto loyihasi orqali yo‘lovchilar transportda to‘lovni alamga oshirishi mumkin.
+Yaʼni avtobus yoku metrolarda yo‘l kira haqini to‘lash mumkin.
+Quyidagi keltirilgan talablardan kelib chiqib loyihani quring.
+Pul to‘lash jarayoni Terminal va Atto kartalari orqali bajariladi.
+Yo‘lovchi kartani avtobus yoki metroda joylashgan terminalga tekkizgan holda to‘lovni amalga oshiradi.
+Sistemaga adminlar terminallarni va kartalarni  kirish funksionali bo‘lishi kerak.
+Tizim Managing class yordamida bajariladi.
+
+Talab 1:
+    setFaire() - metodi yo'l kira xaqini o'rnatihs uchun ishlatilaid.
+
+Talab 2:
+    Card - kartalar.
+    addCard() - metodi tizimda  card yaratadi.
+       id - karta nomeri.
+       balance - kartadagi pul miqdori.
+    getCard() - metod card-ni id-sini qabul qiladi va id-si shunga teng bo'lgan card-ni return qiladi.
+    recharge() - metod card-ga pul tashlash uchun ishlatiladi.
+        id - bu pul tashlanmoqchi bo'lgan card-ning id-si
+        amount - tashlanmoqchi bo'lgan pul miqdori.
+    getCardList() - method barcha card-larni return qiladi.
+
+Talab 3:
+    Tarminal -
+    addTerminal() - terminal yaratish uchun ishlatiladi.
+        id - tarminal id
+        address - terminal joylashgan joyni bildiradi.
+    terminalList() - meto barch terminal ro'yhatini return qiladi.
+
+Talab 4:
+    Transaction - qilingan to'lovlar ni bildiradi.
+    makeTransaction() - metod to'lovni amalga oshirish uchun ishlatiladi.
+        terminalId - to'lov qilinmoqchi bo'lgan terminal id-si
+        cardId - to'lov qilinmoqchi bo'lgan card id-si
+
+        method quyidagi tekshuruvlarni bajarishi kerak:
+            1. null  agar terminal topilmasa
+            2. null agar  carta topilmasa
+            3. null agar cartada yetarli pul bo'lmasa
+            4. null agar shu 1 munit ichida  terminal va carta dan qayta foydalanilsa
+            5.  agar hammasi to'g'ri bo'lsa  Transaction objecti return qilishi kerak
+            6. Carddan yo`lkira haqqi yechib olinishi kerak
+
+        metod Transaction ob'ektini return qiladi.
+
+    Transaction klassida quyidagi metodlar bor:
+        getCard() - transaction qilingan card ob'ektini retune qiladi.
+        getTerminal() - transaction qilingan tarminal ob'ektini retune qiladi.
+
+    getById() - metodi id-si bo'yicha Transaction-ni return qiladi. Bo'lmasa null return qiladi.
+    transactionListByTerminal() - metodi terminal id-ni qabul qiladi va
+        shu terminal orqalin qilingan to'lovlarni (transaction-larni)  retunr qiladi.
+   transactionListByCard() - metodi card id-ni qabul qiladi va
+        shu card orqali qilingan to'lovlarni (transaction-larni)  retunr qiladi.
+
